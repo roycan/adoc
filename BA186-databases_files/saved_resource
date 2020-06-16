@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>BA 186 - Databases</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="reveal.js/css/reveal.css" rel="stylesheet">
+    <link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+    <link href="reveal.js/lib/css/zenburn.css" rel="stylesheet">
+    <script src="http://getfirebug.com/firebug-lite.js#startOpened=false"></script>
+    <script type="text/javascript">document.write('<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');</script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+<section>
+  <section id="truedesigning_databases" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2><strong class="$$id apply call">Designing Databases</strong></h2>
+<div id="" class="paragraph data-line-8">
+  <p>BA 186 - Information Systems Analysis and Design</p>
+</div>
+<div id="" class="paragraph data-line-11">
+  <p>Roy Vincent L. Canseco</p>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truesystems_development_life_cycle" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Systems Development Life Cycle</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-19">
+  <div class="content"><img src="SDLC-databases.png" alt="SDLC databases" width="" height="" style="0:background: "/>
+    <div class="title">Figure 1. Designing Databases</div>
+  </div>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truecustomer_entity" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Customer Entity</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-43">
+  <div class="content"><img src="customer.png" alt="customer" width="" height="" style="0:background: "/>
+  </div>
+</div>
+<div id="" class="paragraph data-line-55">
+  <p>Table:</p>
+</div>
+<div id="" class="quoteblock data-line-57">
+  <blockquote>
+<div id="" class="paragraph data-line-1">
+  <p>CUSTOMER(Customer_ID, Name, Address)</p>
+</div></blockquote>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="trueproduct_entity" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Product Entity</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-67">
+  <div class="content"><img src="product.png" alt="product" width="" height="" style="0:background: "/>
+  </div>
+</div>
+<div id="" class="paragraph data-line-80">
+  <p>Table:</p>
+</div>
+<div id="" class="quoteblock data-line-82">
+  <blockquote>
+<div id="" class="paragraph data-line-1">
+  <p>PRODUCT(Product_num, Model, Description)</p>
+</div></blockquote>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="trueentity_relationship_diagram" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Entity Relationship Diagram</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-100">
+  <div class="content"><img src="ERD.png" alt="ERD" width="" height="" style="0:background: "/>
+  </div>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truetables" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Tables</h2>
+<div id="" class="quoteblock data-line-155">
+  <blockquote>
+<div id="" class="paragraph data-line-1">
+  <p>CUSTOMER(Custome_ID, Name, Address)</p>
+</div></blockquote>
+</div>
+<div id="" class="quoteblock data-line-157">
+  <blockquote>
+<div id="" class="paragraph data-line-1">
+  <p>ORDER(Order_num, Order_date, Product, Quantity)</p>
+</div></blockquote>
+</div>
+<div id="" class="quoteblock data-line-159">
+  <blockquote>
+<div id="" class="paragraph data-line-1">
+  <p>PRODUCT(Product_num, Model, Description)</p>
+</div></blockquote>
+</div>
+<div id="" class="quoteblock data-line-161">
+  <blockquote>
+<div id="" class="paragraph data-line-1">
+  <p>INVOICE(Invoice_num, Order_num)</p>
+</div></blockquote>
+</div>
+<div id="" class="quoteblock data-line-163">
+  <blockquote>
+<div id="" class="paragraph data-line-1">
+  <p>SHIPPING(Shipping_num, Product, Quantity)</p>
+</div></blockquote>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truecustomer_table" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Customer Table</h2>
+<table id="" class="table-block frame-all frame-all data-line-172">
+  <colgroup>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Customer_ID
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Customer_Name
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Salesperson
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Region
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">8023</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Aguilon</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Buenaventura</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Luzon</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">9167</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Anarcon</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Cabrera</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Visayas</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">7924</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Angeles</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Dee</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Mindanao</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">6837</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Babila</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Dimalanta</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Palawan</p>
+        </td>
+      </tr>
+    </tbody>
+  </colgroup>
+</table>
+  </section>
+</section>
+
+<section>
+  <section id="truetable_breakdown" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Table Breakdown</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-184">
+  <div class="content"><img src="table-breakdown.png" alt="table breakdown" width="" height="" style="0:background: "/>
+  </div>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truestreamlined_customers_table" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Streamlined Customers Table</h2>
+<table id="" class="table-block frame-all frame-all left data-line-216">
+  <colgroup>
+    <col style="width:33.3333"/>
+    <col style="width:33.3333"/>
+    <col style="width:33.3334"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Customer_ID
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Customer_Name
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Salesperson
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">8023</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Aguilon</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Buenaventura</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">9167</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Anarcon</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Cabrera</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">7924</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Angeles</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Dee</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">6837</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Babila</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Dimalanta</p>
+        </td>
+      </tr>
+    </tbody>
+  </colgroup>
+</table>
+  </section>
+</section>
+
+<section>
+  <section id="trueadditional_salesperson_table" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Additional Salesperson Table</h2>
+<table id="" class="table-block frame-all frame-all right data-line-228">
+  <colgroup>
+    <col style="width:50"/>
+    <col style="width:50"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Salesperson
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Region
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Buenaventura</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Luzon</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Cabrera</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Visayas</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Dee</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Mindanao</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Dimalanta</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Palawan</p>
+        </td>
+      </tr>
+    </tbody>
+  </colgroup>
+</table>
+  </section>
+</section>
+
+<section>
+  <section id="truerelated_entities" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Related Entities</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-239">
+  <div class="content"><img src="customer-order.png" alt="customer order" width="" height="" style="0:background: "/>
+  </div>
+</div>
+<div class="ulist $$id apply call data-line-262">
+  <ul class="$$id apply call">
+    <li>
+      <p>Each Customer can place 0 to many Orders
+      </p>
+    </li>
+    <li>
+      <p>Each Order must have been from 1 and only 1 Customer
+      </p>
+    </li>
+  </ul>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truerelationship_symbols" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Relationship Symbols</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-269">
+  <div class="content"><img src="customer-order2.png" alt="customer order2" width="" height="" style="0:background: "/>
+  </div>
+</div>
+<div class="ulist $$id apply call data-line-292">
+  <ul class="$$id apply call">
+    <li>
+      <p>Each Customer can place 0 to many Orders
+      </p>
+    </li>
+    <li>
+      <p>Each Order must have been from 1 and only 1 Customer
+      </p>
+    </li>
+  </ul>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truestreamlined_customers_table_2" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Streamlined Customers Table</h2>
+<table id="" class="table-block frame-all frame-all left data-line-301">
+  <caption class="title">Table 1. Customer</caption>
+  <colgroup>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Customer_ID
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Customer_Name
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Salesperson
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">&lt;other_details&gt;
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">8023</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Aguilon</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Buenaventura</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">&#8230;&#8203;</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">9167</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Anarcon</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">Cabrera</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">&#8230;&#8203;</p>
+        </td>
+      </tr>
+    </tbody>
+  </colgroup>
+</table>
+<table id="" class="table-block frame-all frame-all right data-line-309">
+  <caption class="title">Table 2. Order</caption>
+  <colgroup>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Order_Number
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Order_Date
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Promised_Date
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Customer_ID
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">57194</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">03-15-2020</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">03-21-2020</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">9167</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">63725</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">06-03-2020</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">06-06-2020</p>
+        </td>
+        <td colspan="" rowspan="" style="" class="tableblock halign-left valign-top">
+          <p class="tableblock">9167</p>
+        </td>
+      </tr>
+    </tbody>
+  </colgroup>
+</table>
+  </section>
+</section>
+
+<section>
+  <section id="trueadd_to_cart" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Add to Cart</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-323">
+  <div class="content"><img src="product-order.png" alt="product order" width="" height="" style="0:background: "/>
+  </div>
+</div>
+<div class="ulist $$id apply call data-line-344">
+  <ul class="$$id apply call">
+    <li>
+      <p>Each order includes 1 to many products
+      </p>
+    </li>
+    <li>
+      <p>Each product is included in 0 to many orders
+      </p>
+    </li>
+  </ul>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="trueadd_to_cart_2" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Add to Cart</h2>
+<div id="" style="text-align:;float:float: " class="imageblock data-line-354">
+  <div class="content"><img src="product-order2.png" alt="product order2" width="" height="" style="0:background: "/>
+  </div>
+</div>
+<div class="ulist $$id apply call data-line-379">
+  <ul class="$$id apply call">
+    <li>
+      <p>Each order includes 1 to many ordered quantities
+      </p>
+    </li>
+    <li>
+      <p>Each product is included in 0 to many ordered quantities
+      </p>
+    </li>
+  </ul>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="trueequivalent_database_tables" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Equivalent Database Tables</h2>
+<div id="" class="paragraph data-line-389">
+  <p>Orders Table:</p>
+</div>
+<table id="" class="table-block frame-all frame-all data-line-392">
+  <colgroup>
+    <col style="width:33.3333"/>
+    <col style="width:33.3333"/>
+    <col style="width:33.3334"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Order_Num
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Order_Date
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Promised_Date
+        </th>
+      </tr>
+    </thead>
+  </colgroup>
+</table>
+<div id="" class="paragraph data-line-396">
+  <p>Order Lines Table:</p>
+</div>
+<table id="" class="table-block frame-all frame-all data-line-398">
+  <colgroup>
+    <col style="width:33.3333"/>
+    <col style="width:33.3333"/>
+    <col style="width:33.3334"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Order_Num
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Product_Num
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Quantity_Ordered
+        </th>
+      </tr>
+    </thead>
+  </colgroup>
+</table>
+<div id="" class="paragraph data-line-402">
+  <p>Products Table:</p>
+</div>
+<table id="" class="table-block frame-all frame-all data-line-404">
+  <colgroup>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <col style="width:25"/>
+    <thead>
+      <tr>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Product_Num
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Model
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">Description
+        </th>
+        <th colspan="" rowspan="" style="" class="tableblock halign-left valign-top">(other attributes)
+        </th>
+      </tr>
+    </thead>
+  </colgroup>
+</table>
+  </section>
+</section>
+
+<section>
+  <section id="truetakeaways" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>Takeaways</h2>
+<div id="" class="olist arabic data-line-414">
+  <ol start="" type="" class="arabic">
+    <li>
+      <p>Get a Clear Concept</p>
+    </li>
+    <li>
+      <p>Streamline to Optimize</p>
+    </li>
+    <li>
+      <p>Connect Tables with foreign ID&#8217;s</p>
+    </li>
+  </ol>
+</div>
+<div id="" class="paragraph data-line-418">
+  <p>Databases are not magic, but they can look like it when well designed.  :)</p>
+</div>
+  </section>
+</section>
+
+<section>
+  <section id="truethe_end" data-transition="" data-transition-speed="" data-background="" data-background-size="" data-background-repeat="" data-background-transition="">
+    <h2>The End</h2>
+  </section>
+</section></div>
+    </div>
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+    <script type="text/javascript">
+      function initializeReveal() {
+        // See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+        Reveal.initialize({
+          // Display controls in the bottom right corner
+          controls: true,
+          // Display a presentation progress bar
+          progress: true,
+          // Display the page number of the current slide
+          slideNumber: true,
+          // Push each slide change to the browser history
+          history: true,
+          // Enable keyboard shortcuts for navigation
+          keyboard: true,
+          // Enable the slide overview mode
+          overview: true,
+          // Vertical centering of slides
+          center: true,
+          // Enables touch navigation on devices with touch input
+          touch: true,
+          // Loop the presentation
+          loop: false,
+          // Change the presentation direction to be RTL
+          rtl: false,
+          // Turns fragments on and off globally
+          fragments: true,
+          // Flags if the presentation is running in an embedded mode,
+          // i.e. contained within a limited portion of the screen
+          embedded: false,
+          // Number of milliseconds between automatically proceeding to the
+          // next slide, disabled when set to 0, this value can be overwritten
+          // by using a data-autoslide attribute on your slides
+          autoSlide: 0,
+          // Stop auto-sliding after user input
+          autoSlideStoppable: true,
+          // Enable slide navigation via mouse wheel
+          mouseWheel: true,
+          // Hides the address bar on mobile devices
+          hideAddressBar: true,
+          // Opens links in an iframe preview overlay
+          previewLinks: false,
+          // Theme (e.g., beige, blond, default, moon, night, serif, simple, sky, solarized)
+          theme: Reveal.getQueryHash().theme || 'serif',
+          // Transition style (e.g., default, cube, page, concave, zoom, linear, fade, none)
+          transition: Reveal.getQueryHash().transition || 'default',
+          // Transition speed (e.g., default, fast, slow)
+          transitionSpeed: 'default',
+          // Transition style for full page slide backgrounds (e.g., default, none, slide, concave, convex, zoom)
+          backgroundTransition: 'default',
+          // Number of slides away from the current that are visible
+          viewDistance: 3,
+          // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+          parallaxBackgroundImage: '',
+          // Parallax background size in CSS syntax (e.g., "2100px 900px")
+          parallaxBackgroundSize: '',
+          // Optional libraries used to extend on reveal.js
+          dependencies: [
+            {
+              src: 'reveal.js/lib/js/classList.js',
+              condition: function () { return !document.body.classList; }
+            },
+            { src: '#{revealjsdir}/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            {
+              src: 'reveal.js/plugin/zoom-js/zoom.js',
+              async: true,
+              condition: function () { return !!document.body.classList; }
+            },
+            {
+              src: 'reveal.js/plugin/notes/notes.js',
+              async: true,
+              condition: function () { return !!document.body.classList; }
+            }
+          ]
+        });
+      }
+      initializeReveal();
+    </script>
+  </body>
+</html>
