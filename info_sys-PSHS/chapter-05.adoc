@@ -1,0 +1,216 @@
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 3
+
+
+
+
+== Disaster Recovery Planning 
+
+[uml,file="images/mindmap-05.png"]
+--
+@startmindmap
+* M.I.S
+
+** D.R.P.
+
+*** Networks Disaster Recovery 
+
+*** Data Storage  Recovery 
+
+*** Backup and Restoration
+
+**** Periodic Backup Procedures
+
+**** Backup Schemes
+
+**** Method of Rotation
+
+@endmindmap
+--
+
+We have to be able to list and classify our systems.
+
+Critical ::
+These functions cannot be performed unless they are replaced by
+identical capabilities. Critical applications cannot be replaced by manual methods. Tolerance to
+interruption is very low; therefore, cost
+of interruption is very high.
+
+Vital :: 
+These functions can be performed manually, but only for a brief
+period of time. There is a higher tolerance to interruption than with critical systems and, therefore,
+somewhat lower costs of interruption, provided that functions are restored within a certain time frame
+(usually five days or less).
+
+Sensitive ::
+These functions can be performed manually, at a tolerable cost and for an extended period of time.While they can be performed
+manually, it usually is a difficult process and requires additional staff to perform.
+
+Nonsensitive ::
+These functions may be interrupted for an extended period of time, at little or no cost to the company,
+and require little or no catching up when restored.
+
+
+For each classification, we determine a Recovery Point Objective (RPO) and a corresponding Recovery Time Objective (RTO). There should be common understanding between the management and the MIS regarding these expectations and commitments. 
+
+
+Having a RPO and a RTO allows us to explore alternatives and then select stratigies. Different alternatives may require different man-power, hardware, and contractual needs.
+
+
+
+
+==== Telecommunication Networks Disaster Recovery Methods
+
+Uninterruptible power supplies (UPSs) should be sufficient to provide backup to the
+telecommunication equipment as well as the computer equipment.
+
+Methods for network protection are:
+
+
+Redundancy—This involves a variety of solutions, including: 
+    
+* Providing extra capacity with a
+plan to use the surplus capacity if the normal primary transmission capability is not available. For a
+LAN, a second cable can be installed through an alternate route for use if the primary cable is
+damaged.
+* Providing multiple paths between routers  
+* Using dynamic routing protocols, such as Open Shortest Path First (OSPF) and Enhanced Interior
+Gateway Routing Protocol (EIGRP)
+* Providing for failover devices to avoid single point of failures in routers, switches, firewalls, etc.
+*  Saving configuration files for recovery if network devices, such as those for routers and switches,
+fail. For example, organizations should use Trivial File Transport Protocol (TFTP) servers. Most
+network devices support TFTP for saving and retrieving configuration information.
+
+
+
+
+=== Data Storage Disaster Recovery 
+
+For on-premise installations, it's the redundancies in the server hard drives that is best for keeping the data available during storage failure. 
+
+For the cloud, volume backups are best. 
+
+Redundant Array of Independent (or Inexpensive) Disks (RAID) is the most common, basic way to
+protect data against a single point of failure, in this instance, a disk failure. RAID provides
+performance improvements and fault-tolerant capabilities via hardware or software solutions,
+breaking up data and writing data to a series of multiple disks to simultaneously improve performance
+and/or save large files. These systems provide the potential for cost-effective mirroring offsite for
+data backup. A variety of methods, categorized into 11 levels (the most popular being 0 [stripe], 1
+[mirror], their
+combinations [0+1 or 1+0] and 5), is defined for combining several disk drives into what appears to
+the system as a single disk drive. RAID improves on the single-drive-only solution, because it offers
+better performance and/or data redundancy.
+
+The array-based (hardware) replication is absolutely transparent to the application (i.e., no special
+provisions are needed from the OS or the application side).
+If there is no disk array, the data stored on local server volumes (RAID or not) can still be replicated
+to a remote site by using host-based data replication solutions. These act similarly to hardware-based
+solutions.
+
+
+=== Backup and Restoration
+
+An inventory of contents at the offsite storage location should be maintained.
+
+
+==== Periodic Backup Procedures
+
+Scheduling the periodic backups can often be easily accomplished via an automated backup/media
+management system and automated job scheduling software. Using the integrated solution for
+backup/recovery procedures and media management will prevent erroneous or missed backup cycles
+due to operator error.
+
+
+==== Backup Schemes
+
+There are three main schemes for backup: full, incremental and differential.
+Each one has its advantages and disadvantages. Usually, the methods are combined, in order to
+complement each other.
+
+
+===== Full Backup
+
+This type of backup scheme copies all files and folders to the backup media, creating one backup set
+(with one or more media, depending on media capacity). The main advantage is having a unique
+repository in case of restoration, but it requires more time and media capacity.
+
+
+
+===== Incremental Backup
+
+An incremental backup copies the files and folders that changed or are new since the last incremental
+or full backup. If you have a full backup on day 1, your incremental backup on day 2 will copy only
+the changes from day 1 to day 2. On day 3, it will copy only the changes from day 2 to day 3, and so
+on.
+Incremental backup is a faster method of backup and requires less media capacity, but it requires that
+all backup sets restore all changes since a full backup.
+
+|===
+|  | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 | Day 6 | Day 7
+| File 1 | x | x |  |  |  |  |  
+| File 2 | x |  | x |  |  |  |  
+| File 3 | x |  |  | x |  |  |  
+| File 4 | x |  |  |  | x |  |  
+|===
+
+
+===== Differential Backup
+
+A differential backup copies all files and folders that have been added or changed since a full backup
+was performed. This type of backup is faster and requires less media capacity than a full backup and
+requires only the last full and differential backup sets to make a full restoration. It also requires less
+time to restore than incremental backups, but it is slower and requires more media capacity than
+incremental backups because data that are backed up are cumulative.
+
+
+[%header, cols="h,1,1,1,1,1,1,1"]
+|===
+|  | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 | Day 6 | Day 7
+| File 1 | x | x | x | x | x |  |  
+| File 2 | x |  | x | x | x |  |  
+| File 3 | x |  |  | x | x |  |  
+| File 4 | x |  |  |  | x |  |  
+|===
+
+
+==== Method of Rotation
+
+Although there are various approaches for the rotation of media, one of the more accepted techniques
+is referred to as the Grandfather-Father-Son method. In this method, daily backups (son) are made
+over the course of a week. The final backup taken during the week becomes the backup for that week
+(father). The earlier daily backup media are then rotated for reuse as backup media for the second
+week. At the end of the month, the final weekly backup is retained as the backup for that month
+(grandfather). Earlier weekly backup media are then rotated for reuse in subsequent months. At the
+end of the year, the final monthly backup becomes the yearly backup. Normally, monthly and annual
+tapes/other media are retained and not subject to the rotation cycle.
+
+
+[%header, cols="h,1,1,1,1,1"]
+|===
+|  |Mon | Tues | Wed | Thurs | Fri 
+|week 1  |son |son |son | son | father 
+|week 2  |son |son |son | son | father 
+|week 3  |son |son |son | son | father 
+|week 4  |son |son |son | son | grandfather 
+|===
+
+
+Testing all aspects of the DRP is the most important factor in
+achieving success in an emergency situation. The main objective of testing is to ensure that executing
+the plans will result in the successful recovery of the infrastructure and critical business processes.
+Testing should focus on:
+
+• Identifying gaps
+• Verifying assumptions
+• Testing time lines
+• Effectiveness of strategies
+• Performance of personnel
+• Accuracy and currency of plan information
+
+Testing promotes collaboration and coordination among teams and is a useful training tool. Many
+organizations require complete testing annually. In addition, testing should be considered on the
+completion or major revision of each draft plan or complementary plans and following changes in key
+personnel, technology or the business/regulatory environment.
+Testing must be carefully planned and controlled to avoid placing the business at increased risk.

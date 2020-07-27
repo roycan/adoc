@@ -1,0 +1,241 @@
+
+[.text-center]
+DEPARTMENT OF COMPUTER SCIENCE +
+College of Engineering +
+University of the Philippines +
+Diliman, Quezon City
+
+[.text-center]
+*COURSE SYLLABUS* 
+
+[.text-center]
+== *CS 173 -  I.T. SERVICE MANAGEMENT*
+
+[.text-left]
+=== A. Course Description
+
+[horizontal]
+Course number:: CS 173 (elective)
+Course title:: Introduction to I.T. Service Management
+Description:: Introduces the students to the ITIL Framework for best practices in I.T. Service Management
+Prerequisites:: 3rd year standing and up
+Course Credit:: 3 units 
+Number of Hours:: 3 per week
+Meeting Type:: Lecture/ Discussion
+
+Objective::  To develop an understanding of concepts, tools and techniques in modern I.T. Service Management and their current use in Enterprise/ Practice.
+
+Learning Outcomes:: At the end of the course, the students are expected to:
+
+    * Weigh different theoretical and practical considerations influencing the management of I.T. Services; 
+    
+    * Demonstrate the use of  appropriate Project Management processes, tools and techniques towards improvement of I.T. Services;
+    
+    * Deliver a Service Improvement Plan or Prototype that uses Project Management to deliver organizational impact .
+
+<<<
+= 
+[.text-justify]
+=== B. Rationale
+
+The use of I.T. for business is primarily to deliver a host of different services that impact the efficiency and effectiveness of the different business processes. Over the years, the patterns of how the best and biggest companies use I.T. have been collected in what is called the I.T. Infrastructure Library. It has since then been distilled into a framework of best practices adhered to by an increasing number of organizations to promote a common I.T. service management practice. 
+
+This elective works to provide a computer science or engineering student skills in analyzing business processes, managing projects and ultimately deriving value while managing risks in  I.T. activities. 
+
+[.text-left]
+=== C. Course Outline
+
+==== 1. Course Outcomes
+
+Upon completion of the course, students must be able to:
+
+[horizontal]
+CO 1:: Discuss a conceptual framework of I.T. Service Management and its underlying principles
+CO 2:: Apply appropriate tools and techniques for I.T. Risk Assessment and Project Management
+CO 3:: Identify the key principles related to each stage of I.T. Service Management
+CO 4:: Explain the processes of Demand, Capacity and Availability Monitoring
+CO 5:: Identify and plan for managing project risks and opportunities for improvement
+
+
+==== 2. Course Content
+
+
+[%autowidth,options="header, footer", cols="2,^"]
+|====================
+| Course Topics | No. of Hours 
+| Service Strategy | 6 
+| Service Design | 9 
+| Service Transition | 6 
+| Service Operations | 15 
+| Continuous Service Improvement | 12 
+| Total  | 48
+|====================
+
+<<<
+
+==== 3. Course Coverage
+
+[width="100%", options="header",cols="^,^,3s,3,3,3"]
+|===
+
+| Mtg
+| CO(s)
+| Course Topic
+| Key Questions
+| Suggested Activities
+| Suggested Assessments
+
+| 1
+| CO 1
+    CO 3
+| Service Portfolio Management
+| What's in a Service Portfolio?
+| Lecture / Class discussion 
+| Class participation / recitation
+
+| 2
+| CO 4
+| Demand Management
+| What are patterns of business activity?
+| Video Viewing on ITSM principles
+| Class participation / reflection 
+
+| 3
+| CO 1
+    CO 2
+| Service Level Management
+| What are SLA's, OLA's and Underpinning Agreements?
+| Video Viewing on ITSM principles
+| Seatwork on identification
+
+| 4
+| CO 2
+    CO4
+| Availability and Capacity Management
+| How do you measure Availability and Capacity?
+| Lecture/ Class discussions
+| Problem solving quiz
+
+| 5
+| CO 3
+| Continuity Management
+| What does it means to disaster-proof?
+| Class discussions/ role-playing
+| Class participation / Essay writing 
+
+| 6
+| CO 1
+    CO 3
+| Change Management
+| What is the only thing we're sure of?
+| Murphy's Game 
+| Class participation / reflection 
+
+| 7 
+| CO 2
+    CO 4
+| Release, Deployment and Transition
+| What role does I.T. play with human psychology?
+| Lecture / Class discussions
+| Class participation / reflection
+
+| 8
+| CO 1
+    CO 3
+| Service Desk and Request Fulfillment
+| What gives end-users peace of mind?
+| Lecture / Class discussion
+| Poll on best Service Desk Technologies
+
+| 9 
+| CO 2
+    CO 4
+| Incident Management
+| What's the value of pretty band aids?
+| Class discussion / Role playing 
+| Class participation / Recitation 
+
+| 10 
+| CO 2
+    CO 5
+| Problem Management 
+| When is the hassle of surgery worth it? 
+| Lecture / Role playing 
+| Quiz, Identify and explain root cause identification steps 
+
+| 11 
+| CO 4
+    CO 5
+| Event Management 
+| How do you minimize risks? 
+| Class discussion 
+| Reflection paper on a project, its risk matrix and suitable event management
+
+| 12 
+| CO 1
+| Access Management 
+| What it means to give least-privilege permissions? 
+| Lecture / Class discussion 
+| Reflection paper on a project, its roles and a suitable least-privilege permission plan
+
+| 13
+| CO 4
+    CO 5
+| Service Strategies and Metrics 
+| What's a good metric/ index?  
+| Class discussion / Demonstration of Project Management Tools
+| Reflection paper on a project strategy and appropriate metrics 
+
+| 14 
+| CO 4
+| Data Gathering 
+| How much does good data cost? 
+| Class discussion / Role playing 
+| Recitation / Reflection paper
+
+| 15 
+| CO 2
+    CO 5
+| Data Processing and Analysis
+| How does packaging help in delivery? 
+| Class discussion / Demonstration 
+| Case study 
+
+| 16 
+| CO 5
+| Data Presentation and Improvement Plan 
+| What do you know, how sure are you and how would you best to move forward?
+| Class discussion / Recitation  
+| Case study 
+
+| 17
+|
+|
+|
+|
+s| Final examination
+
+
+
+|===
+
+
+<<<
+
+==== 4. Course Requirements 
+    
+1. Case Studies 
+2. In-class Seatwork 
+3. Project Plan Proposal
+4. Attendance and Participation / Recitation
+5. Examinations (Midterms and Finals)
+
+
+[.text-left]
+=== D. References
+
+1. Axelos(2019)._ITIL® Foundation, ITIL 4 edition_. 
+2. P. Bourque and R.E. Fairley, eds.(2014). _Guide to the Software Engineering Body of Knowledge_. Version 3.0, IEEE Computer Society;www.swebok.org.
+
+
+

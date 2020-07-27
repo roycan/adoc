@@ -1,0 +1,346 @@
+= Book Title
+
+
+
+[preface]
+== Preface Title
+
+Preface text begins here.
+
+
+
+[foreword]
+== Foreword
+
+Foreword text begins here.
+
+[role="byline"]
+Some Famous Person
+
+
+
+
+[dedication]
+== Dedication
+
+This book is dedicated to my cat, Garfield.
+
+
+
+
+[[unique_chapter_id]]
+== Chapter Title
+
+[role="byline"]
+Author Name
+
+Chapter text begins here.
+
+This is an example paragraph written in AsciiDoc. See, it's just plain text; no special markup necessary! Do make sure there aren't spaces or manual indentations at the beginning of your paragraph text.
+
+This is a second example paragraph in AsciiDoc. Note that there's a line break and a blank line between paragraphs.
+
+
+---
+
+
+++++
+<pre data-type="programlisting">hostname $ <strong>date</strong>
+<em>Sun</em> Apr  1 12:34:56 GMT 1984</pre>
+++++
+
+
+---
+
+
+++++
+<pre data-type="programlisting">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Title of the document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+The content of the document...
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+++++
+
+
+
+---
+
+
+[source,java]
+----
+int radius = 40;
+float x = 110;
+float speed = 0.5;
+int direction = 1;
+----
+
+
+---
+
+
+[[id_here]]
+.Syntax highlighting sample
+====
+[source,java]
+----
+int radius = 40;
+float x = 110;
+float speed = 0.5;
+int direction = 1;
+----
+====
+
+
+
+---
+
+
+----
+Roses are red,
+   Violets are blue. <1>
+Some poems rhyme;
+   This one doesn't. <2>
+----
+<1> Violets actually have a color value of +#9933cc+.
+<2> This poem uses the literary device known as a "surprise ending."
+
+
+---
+
+
+[[unique_id1]]
+.Tiger Head Cross Reference
+image::images/tiger.png[]
+
+
+---
+
+<<unique_id1>>
+
+---
+
+
+=== A-Head
+
+[[indexing]]
+.A Tiger
+image::images/tiger.png["An image of a cartoonish tiger head"]
+
+
+---
+
+* See <<indexing>> for details.
+* The results is shown in <<EX1>>.
+
+
+----
+Hello world!
+
+0        10        20        30        40
+1234567890123456789012345678901234567890
+----
+
+
+
+[[EX1]]
+.A code block with a title
+====
+----
+Hello world!
+
+0        10        20        30        40
+1234567890123456789012345678901234567890
+----
+====
+
+
+
+==== Tex ile formül örneği
+
+.Başlık (opsiyonel)
+[math,file="images/tex-formula.png"]
+--
+\begin{align}
+\dot{x} & = \sigma(y-x) \\
+\dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xyp
+\end{align}
+--
+
+
+
+
+==== B-Head
+
+image::images/tiger.png["An image of a cartoonish tiger head"]
+
+
+* lions
+* tigers
+** sabre-toothed
+** teapotted
+* lions, tigers, and bears
++
+Use a plus sign (on its own line) with the text below to add multiple paragraphs to a list item.
+
+
+---
+
+. Preparation
+. Assembly
+.. Measure
+.. Combine
+.. Bake
+. Applause
++
+Use a plus sign (on its own line) with the text below to add multiple paragraphs to a list item.
+
+
+
+===== C-Head
+
+
+[[unique_part_id]]
+[part]
+== Part Title
+
+[role="byline"]
+Author Name
+
+[role="byline cont"]
+Author Affiliation
+
+
+
+Term 1:: 
+    Definition/description
+
+Term 2::
+  Something else
+  
+  
+
+
+.A Table
+[options="header"]
+|=======
+|P|Q|P^Q
+|T|T|T
+|T|F|F
+|F|T|F
+|F|F|F
+|=======
+
+
+
+
+[[unique_part_id]]
+[part]
+== Part Title
+
+[role="byline"]
+Author Name
+
+[role="byline cont"]
+Author Affiliation
+
+[role="byline"]
+Another Author
+
+[role="byline cont"]
+Another Author's Affiliation
+
+
+[partintro]
+--
+Insert introductory text here.
+--
+
+
+pass:[<em><code>foo</code></em>]
+pass:[<strong><code>foo</code></strong>]
+pass:[<strong><code><em>foo</em></code></strong>]
+
+
+
+.Sidebar Title
+****
+Sidebar text is surrounded by four asterisk characters above and below.
+****
+
+
+
+[NOTE]
+====
+Here's some text inside a note.
+====
+
+
+
+.Tip Title
+[TIP]
+====
+Here's some text inside a tip.
+====
+
+
+
+.Warning Title
+[WARNING]
+====
+Here's some text inside a warning.
+====
+
+
+
+footnote:[This is a standard footnote.]
+
+
+There should be no spacefootnote:[This is a second standard footnote.] between the text and the note number.
+
+
+
+[quote, Wilfred Meynell]
+____
+Many thanks; I shall lose no time in reading it.
+____
+
+
+
+
+[appendix]
+[role="afterword"]
+== Afterword
+
+Afterword text begins here.
+
+
+pass:[<span class="keep-together">Don't Break Me</span>] 
+pass:[<span class="keep-together"><code>foobar</code></span>]
+
+
+[appendix]
+[[unique_appendix_id]]
+== Resources
+
+The following list of resources ...
+
+
+
+[[glossary]]
+== Glossary
+
+[glossary]
+Crawler:: A program used to index documents.
++
+See Also Spider
+
+
+
+Visit the http://oreilly.com[O'Reilly website]

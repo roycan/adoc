@@ -1,0 +1,77 @@
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 3
+
+
+    This is a draft verion. 
+
+== Executive Summary
+
+[uml,file="images/mindmap-main.png"]
+--
+@startmindmap
+* M.I.S.
+-- Executive Summary
+-- I.S. Operations 
+
+** I.S. Hardware
+** I.S. Architecture and Software
+** I.S. Network Infrastructure
+-- Disaster Recovery Planning 
+
+
+@endmindmap
+--
+
+
+IT service management (ITSM) practices are important to provide assurance to users and to management that
+the *expected level of service* will be delivered.
+Service level expectations are ideally derived from the organization’s business objectives and constraints. 
+IT service
+delivery is a coordination of IS operations, IT services, and management of IS and the groups responsible for
+supporting them. 
+IT services are built on service management frameworks (e.g. ITIL).
+
+=== MIS Necessary Skills
+
+In order to deliver and support IT services, a fair amount of  skill in the following key areas should be present in the MIS Unit.
+
+1. Management and Operations Skills
+2. Software and Architecture Skills
+3. Network Infrastructure Skills
+    a. Wireless Technologies
+    b. Secure Transmission
+    c. Network Administration
+    d. Internet Services
+4. Hardware and Troubleshooting Skills
+    a. Server Setup
+    b. Workstation Maintenance
+
+It is important to have a clear and agreed-upon measure of performance for these areas. This is where Service Level Agreements (SLA's) are used.
+
+
+
+
+=== Managerial Tasks
+
+The manager of MIS is responsible for managing the following in part or in whole.
+
+. IT Service Level Agreements (Expectations)
+. IT Service Capacity
+. IT Service Availability
+. IT Service Continuity 
+. IT Information Security
+. IT-related Finance / Procurement
+
+
+
+Whenever multiple incidents occur simultaneously, *prioritization should be based on both urgency and impact*. 
+Unresolved high-priority incidents are to be reported to the management. 
+
+
+=== MIS and the Management
+
+MIS and Management should agree on a reasonable Recovery Time Objective (RTO) and a reasonable Recovery Point Objective (RPO) for key IT services. This gives a target on how long a particular service can be down following a disaster. It also gives a target on the recency of the data that will be loaded once the service up after a disaster. 
+
+In general, the faster the recovery, the more costly and harder things are to be maintain. The more complete the data to be recovered, the more costly also. The right balance is normally achieved when there's good understanding between MIS and the management. 

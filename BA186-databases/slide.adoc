@@ -1,0 +1,421 @@
+include::_settings_reveal.adoc[]
+
+// include::_settings_deck.adoc[]
+
+= BA 186 - Databases 
+
+== *Designing Databases*
+BA 186 - Information Systems Analysis and Design
+
+
+Roy Vincent L. Canseco
+
+
+
+== Systems Development Life Cycle
+
+.Designing Databases
+[uml, file='SDLC-databases.png']
+--
+@startmindmap
+* SDLC
+** Planning
+** Analysis
+** Design
+***[#lightgreen] Databases
+*** Forms and Reports
+*** Dialogs and Interfaces
+*** Distributed and Internet Systems
+** Implementation
+** Maintenance
+@endmindmap
+--
+
+// Let's consider some common context 
+// ECQ, ___ wants to buy headphones online for zoom classes AKA netflix ...
+// If Sir Roy is the seller, what does Sir need to know about you i.e, what's in Sir's database about you?
+
+
+== Customer Entity
+
+
+[uml, file='customer.png']
+--
+@startuml
+
+entity Customer {
+  Customer_ID
+  --
+  Name
+  Address
+}
+@enduml
+--
+
+Table:
+
+> CUSTOMER(Customer_ID, Name, Address)
+
+
+// If there's a Customer Entity in the context of ___ wanting to buy his headphones, what other Entity is important to be there? 
+
+
+== Product Entity
+
+
+[uml, file='product.png']
+--
+@startuml
+
+entity Product {
+  Product_num
+  --
+  Model
+  Description
+}
+@enduml
+--
+
+
+Table:
+
+> PRODUCT(Product_num, Model, Description)
+
+
+// commend understanding
+// as BA scholars, I recommend we go deeper a bit
+// Customers create Orders, which contains a list of products with corresponding quantitiess
+// so we need an Order entity
+// an Order will have to be billed with an Invoice,
+// so we need an Invoice entity
+// the headphones have to be delivered
+// so we need a Shipping Entity
+// Now take paper, pen and 2 minutes to jot down what attributes you think are important for the Order, Invoice and Shipping Entities
+// this is a good time for WheelofNames.com
+
+
+== Entity Relationship Diagram
+
+[uml, file='ERD.png']
+--
+@startuml
+skinparam linetype ortho
+
+entity Product {
+  Product_num
+  --
+  Model
+  Description
+}
+
+entity Customer {
+  Customer_ID
+  --
+  Name
+  Address
+}
+
+entity Order {
+  Order_num
+  --
+  Order_date
+  Product
+  Quantity
+}
+
+entity Shipping {
+  Shipping_num
+  --
+  Product
+  Quantity
+}
+
+entity Invoice{
+  Invoice_num 
+  Order_num
+}
+
+Customer -- Order
+Order - Invoice
+Order -- Product
+Product - Shipping
+Shipping - Invoice
+
+
+@enduml
+--
+
+
+// Why is there no lines from Shipping to Customer?
+// Once you're clear with your concept, making the tables of your database is straightforward
+
+
+== Tables 
+
+> CUSTOMER(Custome_ID, Name, Address)
+
+> ORDER(Order_num, Order_date, Product, Quantity)
+
+> PRODUCT(Product_num, Model, Description)
+
+> INVOICE(Invoice_num, Order_num)
+
+> SHIPPING(Shipping_num, Product, Quantity) 
+
+
+// Ofcouse while doing the database, you'll probably think of all sorts of important details to include
+
+== Customer Table 
+
+
+[width="100%",options="header"]
+|====================
+|  Customer_ID| Customer_Name  | Salesperson  | Region 
+| 8023 | Aguilon | Buenaventura | Luzon  
+| 9167 | Anarcon | Cabrera | Visayas
+| 7924 | Angeles | Dee |  Mindanao
+| 6837 | Babila | Dimalanta | Palawan 
+|====================
+
+
+== Table Breakdown
+
+[uml, file="table-breakdown.png"]
+--
+@startuml
+
+entity Customer_old {
+    Customer_ID
+    --
+    Customer_Name
+    Salesperson
+    Region
+}
+
+entity Customer {
+    Customer_ID
+    --
+    Customer_Name
+    Salesperson
+}
+
+entity Salesperson{
+    Salesperson
+    Region
+}
+
+Customer_old --> Customer
+Customer_old --> Salesperson
+
+@enduml
+--
+
+== Streamlined Customers Table
+
+[width="30%",options="header", role="left"]
+|====================
+|  Customer_ID| Customer_Name  | Salesperson  
+| 8023 | Aguilon | Buenaventura  
+| 9167 | Anarcon | Cabrera 
+| 7924 | Angeles | Dee 
+| 6837 | Babila | Dimalanta  
+|====================
+
+
+== Additional Salesperson Table
+
+[width="30%",options="header", role="right"]
+|====================
+| Salesperson  | Region 
+| Buenaventura | Luzon  
+| Cabrera | Visayas
+| Dee |  Mindanao
+| Dimalanta | Palawan 
+|====================
+
+== Related Entities
+
+[uml, file="customer-order.png"]
+--
+@startuml
+entity Customer {
+    Customer_ID
+    --
+    Customer_Name
+    Address
+    ZipCode
+    Discount
+    Salesperson
+}
+
+entity Order {
+    Order_num
+    --
+    Order_Date
+    Promised_Date
+}
+
+Customer - Order : Places
+@enduml
+--
+
+* Each Customer can place 0 to many Orders
+* Each Order must have been from 1 and only 1 Customer
+
+
+== Relationship Symbols
+
+[uml, file="customer-order2.png"]
+--
+@startuml
+entity Customer {
+    Customer_ID
+    --
+    Customer_Name
+    Address
+    ZipCode
+    Discount
+    Salesperson
+}
+
+entity Order {
+    Order_num
+    --
+    Order_Date
+    Promised_Date
+}
+
+Customer ||-o{ Order : Places 
+@enduml
+--
+
+* Each Customer can place 0 to many Orders
+* Each Order must have been from 1 and only 1 Customer
+
+
+
+== Streamlined Customers Table
+
+.Customer
+[width="30%",options="header", role="left"]
+|====================
+|  Customer_ID| Customer_Name  | Salesperson  | <other_details>
+| 8023 | Aguilon | Buenaventura | ...  
+| 9167 | Anarcon | Cabrera  | ...
+|====================
+
+.Order
+[width="30%",options="header", role="right"]
+|====================
+| Order_Number  | Order_Date | Promised_Date | Customer_ID 
+| 57194 | 03-15-2020 | 03-21-2020 | 9167
+| 63725 | 06-03-2020 | 06-06-2020 | 9167
+|====================
+
+// this is how you make lines across tables
+
+// when you shop online, do you checkout and pay for just one item at a time?
+
+
+== Add to Cart
+
+[uml, file="product-order.png"]
+--
+@startuml
+entity Product {
+    Product_ID
+    --
+    Model
+    Description
+    (Other attributes)
+}
+
+entity Order {
+    Order_num
+    --
+    Order_Date
+    Promised_Date
+}
+
+Order }o-|{ Product : includes  
+@enduml
+--
+
+* Each order includes 1 to many products
+* Each product is included in 0 to many orders
+
+// no one and only one symbol, we can't "connect" the tables
+
+
+
+== Add to Cart
+
+[uml, file="product-order2.png"]
+--
+@startuml
+entity Product {
+    Product_ID
+    --
+    Model
+    Description
+    (Other attributes)
+}
+
+entity Order {
+    Order_num
+    --
+    Order_Date
+    Promised_Date
+}
+
+entity Ordered_Quantity
+
+Order ||-|{ Ordered_Quantity 
+Ordered_Quantity }o-|| Product
+
+@enduml
+--
+
+* Each order includes 1 to many ordered quantities
+* Each product is included in 0 to many ordered quantities
+
+// now we can "connect"
+// the table names can get weird
+
+
+== Equivalent Database Tables
+
+
+Orders Table: 
+
+[width="100%",options="header"]
+|====================
+|  Order_Num | Order_Date  | Promised_Date  
+|====================
+
+Order Lines Table: 
+[width="100%",options="header"]
+|====================
+| Order_Num | Product_Num  | Quantity_Ordered  
+|====================
+
+Products Table:
+[width="100%",options="header"]
+|====================
+| Product_Num | Model | Description  | (other attributes)  
+|====================
+
+
+// This slide can be improved.
+// the question was what happens if we don't have the Order Lines Table
+
+== Takeaways
+
+1. Get a Clear Concept
+2. Streamline to Optimize
+3. Connect Tables with foreign ID's
+
+Databases are not magic, but they can look like it when well designed.  :)
+
+== The End
+

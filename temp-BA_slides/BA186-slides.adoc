@@ -1,0 +1,393 @@
+.Menu Interaction
+[uml, file="menu.png"]
+--
+@startsalt
+{+
+{* File | Edit | View | About
+    File | New | Open | Close | - | Exit  }
+{
+.
+..........   Hello World
+.
+.
+.
+}
+}
+@endsalt
+--
+
+
+.Menu Interaction
+[uml, file="menu2.png"]
+--
+@startsalt
+{+
+{* File | Edit | Source | Refactor
+ Refactor | New | Open File | - | Close | Close All }
+{/ General | Fullscreen | Behavior | Saving }
+{
+{ Open image in: | ^Smart Mode^ }
+[X] Smooth images when zoomed
+[X] Confirm image deletion
+[ ] Show hidden images
+}
+[Close]
+}
+@endsalt
+--
+
+
+
+.Unary 
+[uml, file="unary.png"]
+--
+@startuml
+skinparam linetype ortho
+hide circle
+
+PERSON |o--o| "Is_married_to" PERSON 
+EMPLOYEE }-- "Manages"  EMPLOYEE
+
+@enduml
+--
+
+
+.Binary
+[uml, file="binary.png"]
+--
+@startuml
+hide circle
+
+EMPLOYEE |o--o| "PARKING SPACE" : Is_assigned
+"PRODUCT LINE" ||--{ PRODUCT : Contains
+STUDENT }--{ COURSE : Registers_for
+
+
+@enduml
+
+--
+
+
+
+
+.Associative entity
+[uml, file="associative_entity2.png"]
+--
+@startuml
+hide circle
+
+entity "EMPLOYEE" as e {
+    Employee_ID
+    --
+    Employee_Name
+}
+entity "COURSE" as c{
+    Course_ID
+    --
+    Course_Title
+}
+entity "CERTIFICATE" as cert {
+    Certificate_Number
+    --
+    Date_Completed
+}
+
+e ||-o{ cert
+cert }o-|| c
+@enduml
+--
+
+
+
+.Subtype / Supertype Hierarchy
+[uml, file="subtypes.png"]
+--
+@startuml
+hide circle 
+
+entity "PERSON" as p{
+    SSN
+    --
+    Name
+    Address
+    Gender
+    Date_of_Birth
+}
+
+circle o 
+p -- o
+
+entity "EMPLOYEE" as e{
+    --
+    Salary
+    Date_Hired
+}
+
+o .. e
+
+entity "ALUMNUS" as a{
+    --
+    {Degree(Year,\n Designation,\n Date)}
+}
+
+o .. a
+
+entity "STUDENT" as s{
+    --
+    Major_Dept
+}
+
+o .. s
+
+entity "FACULTY" as f {
+    --
+    Rank
+}
+
+circle "d" as d1
+
+e .. d1
+
+d1 .. f 
+
+entity "STAFF" as staff{
+    --
+    Position
+}
+
+d1 .. staff 
+
+circle "d" as d2 
+
+s -- d2 
+
+entity "GRADUATE\n STUDENT" as g{
+    --
+    Test_Score
+}
+
+d2 .. g
+
+entity "UNDERGRAD \n STUDENT" as u{
+    --
+    Class_Standing
+}
+
+d2 .. u
+
+@enduml
+--
+
+
+
+
+.Context Diagram
+[uml,file="context-diagram.png"]
+--
+@startuml
+
+skinparam linetype ortho
+
+rectangle CUSTOMER as C
+rectangle KITCHEN as K
+usecase "Food-Ordering System" as sys
+rectangle "RESTAURANT MANAGER" as R
+C --> sys : "Customer Order"
+sys --> C : "Receipt"
+sys --> K : "Food Order"
+sys --> R : "Management Reports"
+
+
+@enduml
+--
+
+
+
+.Level-0 Diagram
+[uml, file="level0.png"]
+--
+@startuml
+
+skinparam linetype ortho
+
+rectangle CUSTOMER as C
+rectangle KITCHEN as K
+rectangle "RESTAURANT MANAGER" as R
+
+usecase "1.0 \n Recieve and Transform \n Customer \n Food Order" as 1.0 
+
+usecase "2.0 \n Update \n Goods Sold \n File" as 2.0
+
+usecase "3.0 \n Update \n Inventory \n File" as 3.0
+
+usecase "4.0 \n Produced Management Reports" as 4.0
+
+component "[D2] Goods Sold \n File" as D2
+component "[D1] Inventroy \n File" as D1
+
+
+C --> 1.0 : "Customer Order" 
+C <-- 1.0 : "Receipt" 
+1.0 -> K : "Food Order"
+1.0 --> 2.0 : "Goods Sold" 
+2.0 --> D2 : "Formatted Goods Sold Data" 
+1.0 --> 3.0 : "Inventory Data"
+3.0 --> D1 : "Formatted Inventory Data"
+D1 --> 4.0 : "Daily Inventory Depletion Amounts"
+D2 --> 4.0 : "Daily Goods Sold Amounts"
+4.0 --> R : "Management Reports"
+
+
+@enduml
+--
+
+
+
+.Relationship (Completes)
+[uml, file="erd.png"]
+--
+@startuml
+'skinparam linetype ortho
+hide circle 
+
+entity EMPLOYEE {
+  Employee_ID
+  --
+  Employee_Name(...)
+  Birth_Date
+}
+
+entity COURSE {
+    Course_ID
+    --
+    Course_Title
+    {Topic}
+}
+  
+EMPLOYEE }-{ COURSE  
+
+
+object "Emp_01" as chen {
+    Chen
+}
+
+object "Emp_02" as melton  {
+    Melton
+} 
+object "Emp_03" as ritchie {
+    Ritchie
+} 
+
+object "Emp_04" as celko {
+    Celko
+} 
+object "Emp_05"  as gosling {
+    Gosling
+} 
+object "Course_01" as cpp {
+    C++
+}
+object "Course_02" as java  {
+    Java
+} 
+object "Course_03" as cobol  {
+    COBOL
+} 
+object "Course_04" as vb {
+    Visual Basic
+} 
+object "Coures_05" as perl  {
+    Perl
+} 
+object "Course_06" as sql{
+    SQL
+} 
+
+chen .. cpp
+chen .. java
+chen .. vb
+melton -- cpp
+melton -- cobol
+melton -- perl
+ritchie == perl
+celko .. java
+celko .. sql
+gosling == java
+gosling ==sql
+
+
+
+  
+@enduml
+--
+
+
+
+
+.Relationship instances (Completes)
+[uml, file="instances.png"]
+--
+@startuml
+
+object "Emp_01" as chen {
+    Chen
+}
+
+object "Emp_02" as melton  {
+    Melton
+} 
+object "Emp_03" as ritchie {
+    Ritchie
+} 
+
+object "Emp_04" as celko {
+    Celko
+} 
+object "Emp_05"  as gosling {
+    Gosling
+} 
+object "Course_01" as cpp {
+    C++
+}
+object "Course_02" as java  {
+    Java
+} 
+object "Course_03" as cobol  {
+    COBOL
+} 
+object "Course_04" as vb {
+    Visual Basic
+} 
+object "Coures_05" as perl  {
+    Perl
+} 
+object "Course_06" as sql{
+    SQL
+} 
+
+chen == cpp
+chen == java
+chen == vb
+melton -- cpp
+melton -- cobol
+melton -- perl
+ritchie == perl
+celko .. java
+celko .. sql
+gosling == java
+gosling ==sql
+
+
+@enduml
+--
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,279 @@
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 3
+
+== Information Systems Operations 
+
+
+[uml,file="images/mindmap-01.png"]
+--
+@startmindmap
+* M.I.S
+
+** I.S. Operations 
+*** Management of I.S. Operations
+**** Control Functions
+*** I.T. Service Management
+
+**** Service Level
+
+
+**** Job Scheduling Software
+
+
+*** Monitoring Use of Resources
+
+
+**** Process of Incident Handling
+
+**** Problem Management
+
+**** Detection, Documentation, Control, Resolution, and Reporting of Abnormal Conditions
+
+*** Support/ Help Desk
+
+*** Change Management Process
+
+*** Release Management 
+
+
+*** Quality Assurance
+
+*** Information Security Management
+
+*** Media Sanitation
+
+
+
+@endmindmap
+--
+
+
+
+
+
+=== Management of I.S. Operations
+
+Tasks of the MIS staff include:
+
+. Execute and monitor scheduled jobs.
+. Facilitate timely backup.
+. Monitor unauthorized access and use of sensitive data.
+. Monitor and review the extent of adherence to IS operations procedures as established by IS and
+business management.
+. Participate in tests of disaster recovery plans (DRPs).
+. Monitor the performance, capacity, availability and failure of information resources.
+. Facilitate troubleshooting and incident handling.
+
+
+The Procedure Documentation of MIS will include the following 
+
+. Operations procedures that are based on operating instructions and job flows for computer and
+peripheral equipment• Procedures for monitoring systems and applications
+. Procedures for detecting systems and applications errors and problems
+. Procedures for handling IS problems and escalation of unresolved issues
+. Procedures for backup and recovery
+
+==== Control Functions
+
+
+=== I.T. Service Management
+
+The fundamental premise associated with ITSM is that IT can be managed through a series of discrete
+processes that provide service to the business.
+
+Service-level management is the process of defining, agreeing on, documenting and managing levels
+of service that are required and cost justified. Service-level management deals with more than the
+SLAs themselves; it includes the production and maintenance of the service catalog, service review
+meetings and service improvement plans (SIPs) for areas that are not achieving their SLAs.
+
+
+==== Service Level Agreements
+
+An SLA is an agreement between the IT organization and the customer. The SLA details the service(s)
+to be provided. The IT organization could be an
+internal IT department or an external IT service provider, and the customer is the business.
+
+The SLA describes the services in nontechnical terms, from the viewpoint of the customer. During the
+term of the agreement, it serves as the standard for measuring and adjusting the services.
+
+Defined service levels must be regularly monitored by an appropriate level of management to ensure
+that the objectives of IS operations are achieved.
+Monitoring of service levels is essential for outsourced services, particularly if the third party is
+involved in directly providing services to an organization’s customers.
+It is important to note that when service delivery is outsourced, only responsibility for serviced
+provision is outsourced—accountability is not and still rests with the organization.
+
+
+
+=== Monitoring Use of Resources
+
+
+==== Process of Incident Handling
+
+Incident management focuses on providing increased continuity of
+service by reducing or removing the adverse effect of disturbances to IT services and covers almost
+all nonstandard operations of IT services—thereby defining the scope to include any nonstandard
+event. In addition to initiation, other steps in the incident life cycle may include classification, assignment
+to specialists, resolution and closure.
+
+For example, there could be a situation where a service request from the chief information
+officer (CIO) for a printer problem arrives at the same time as a request from the technology team to
+attend to a server crash. IS management should have parameters in place for assigning the priority of
+these incidents, considering both the urgency and impact.
+
+
+Unresolved incidents are escalated based on the criteria set by IS
+management. Incident management is reactive, and its objective is to respond to and resolve issues
+restoring normal service (as defined by the SLA) as quickly as possible.
+
+
+==== Problem Management
+
+Problem management aims to resolve issues through the investigation and in-depth analysis of a major
+incident or several incidents that are similar in nature to identify the root cause. Standard
+methodologies for root cause analysis include the development of fishbone/Ishikawa cause-and-effect
+diagrams, brainstorming and the use of the 5 Whys—an iterative question-asking technique used to
+explore the cause-and-effect relationships underlying a problem.
+
+After a problem is identified and analysis has identified a root cause, the condition becomes a \known
+error. A workaround can then be developed to address the error state and prevent future occurrences
+of the related incidents.
+
+This problem is then added to the known error database (KEDB). The goal is to proactively prevent
+reoccurrence of the error elsewhere or, at a minimum, have a workaround that can be provided
+immediately should the incident reoccur.Problem management and incident management are related but have different methods and objectives.
+Problem management’s objective is to reduce the number and/or severity of incidents, while incident
+management’s objective is to return the affected business process back to its normal state as quickly
+as possible, minimizing the impact on the business. Effective problem management can show a
+significant improvement in the quality of service of an IS organization.
+
+
+==== Detection, Documentation, Control, Resolution, and Reporting of Abnormal Conditions
+
+Because of the highly complex nature of software, hardware and their interrelationships, a mechanism
+should exist to detect and document any abnormal conditions that could lead to the identification of an
+error.
+
+
+For control purposes, the ability to add to the error log should not be restricted. The ability to update
+the error log, however, should be restricted to authorized individuals, and the updates should be
+traceable.
+
+Problem escalation procedures
+generally include:
+
+• Names/contact details of individuals who can deal with specific types of problems
+• Types of problems that require urgent resolution
+• Problems that can wait until normal working hours
+
+Problem resolution should be communicated to the appropriate entities. This can be through an official email thread that discusses the problem straight up to its resolution.
+
+
+
+=== Support/ Help Desk
+
+Support is generally triaged when a help desk ticket/call is initiated and then escalated based on the
+complexity of the issue and the level of expertise required to resolve the problem.
+
+The primary purpose of the help desk is to service the user. The second is to escalate issues it cannot resolve. The third is to document.
+
+The basic function of the help desk is to be the first, single and central point of
+contact for users and to follow an incident management process.
+
+
+=== Change Management Process
+
+Change management is used when changing hardware, installing or
+upgrading to new releases of off-the-shelf applications, installing a software patch and configuringvarious network devices (e.g., firewalls, routers and switches).
+
+The procedures associated with this process ensure that:
+
+• All relevant personnel are informed of the change and when it is happening.
+• System, operations and program documentation are complete, up to date and in compliance with the
+established standards.
+• Job preparation, scheduling and operating instructions have been established.
+• System and program test results have been reviewed and approved by user and project management.
+• Data file conversion, if necessary, has occurred accurately and completely as evidenced by review
+and approval by user management.
+• System conversion has occurred accurately and completely as evidenced by review and approval by
+user management.
+• All aspects of jobs turned over have been tested, reviewed and approved by control/operations
+personnel.
+• Legal or compliance aspects have been considered.
+• The risk of adversely affecting the business operation are reviewed and a rollback plan is
+developed to back out the changes, if necessary.
+
+Apart from change control, standardized methods and procedures for change management are needed
+to ensure and maintain agreed-on levels in quality service. These methods are aimed at minimizing
+the adverse impact of any probable incidents triggered by change that may arise.
+
+This is achieved by formalizing and documenting the process of change request, authorization, testing,
+implementation and communication to the users. Change requests are often categorized into
+emergency changes, major changes and minor changes, and may have different change management
+procedures in place for each type of change.
+
+
+=== Patch Management
+
+Patch management is an area of systems management that involves acquiring, testing and installing
+multiple patches (code changes) to an administered computer system to maintain up-to-date software
+and often to address security risk.
+
+Patches can be ineffective and
+can cause more problems than they fix. To avoid problems, patch management experts suggest that
+system administrators take simple steps, such as performing backups and testing patches on non-
+critical systems prior to installations.
+
+
+
+=== Release Management 
+
+The
+term release is used to describe a collection of authorized changes. The release will typically consist
+of several problem
+fixes and enhancements to the service.
+The releases, whether major or minor, will have a unique identity.
+
+The releases are controlled, and, if any problems arise in the new release, one should be able to back
+out completely and restore the system to its previous state. Suitable contingency plans may also be
+developed, if it is not completely restorable. These plans are developed before the new release is
+implemented.
+
+The common types of releases are the following:
+
+* Major Release
+* Minor Release
+* Emergency Release
+
+
+Many new system implementations will involve phased delivery of
+functionality and thus require multiple releases. In addition, planned releases will offer an ongoing
+process for system enhancement.
+
+
+Planning a release involves:
+
+• Gain consensus on the release’s contents.
+• Agree to the release strategy (e.g., the phasing over time and by geographical location, business unit
+and customers).
+• Produce a high-level release schedule.
+• Plan resource levels (including staff overtime).
+• Agree on roles and responsibilities.
+• Produce back-out plans.
+• Develop a quality plan for the release.
+• Plan acceptance of support groups and the customer
+
+
+While change management is the process whereby all changes go through a robust testing and
+approval process, release management is the process of putting the software changes into production.
+
+
+=== Quality Assurance
+
+=== Information Security Management
+
+=== Media Sanitation
+
+

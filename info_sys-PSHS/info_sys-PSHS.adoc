@@ -1,0 +1,508 @@
+= PSHS-MC: Information Systems Operations, Maintainance and Support
+Roy Vincent L. Canseco (c) 2020 Manila                         
+Version 0.1, 06.2020                                       
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 2
+:numbered:
+:sectnums:  
+
+    This is a draft verion. 
+
+== Executive Summary
+
+[uml,file="images/mindmap.png"]
+--
+@startmindmap
+* IS Ops
+
+-- Executive Summary
+
+
+-- Information Systems Operations 
+--- Management of I.S. Operations
+---- Control Functions
+--- I.T. Service Management
+
+---- Service Level
+
+--- Infrastructure Operations 
+
+---- Scheduling
+
+
+---- Job Scheduling Software
+
+
+--- Monitoring Use of Resources
+
+
+---- Process of Incident Handling
+
+---- Problem Management
+
+
+---- Detection, Documentation, Control, Resolution, and Reporting of Abnormal Conditions
+
+--- Support/ Help Desk
+
+--- Change Management Process
+
+--- Release Management 
+
+
+--- Quality Assurance
+
+--- Information Security Management
+
+--- Media Sanitation
+
+
+
+
+
+** Information Systems Hardware
+
+*** Computer Hardware Components and Architectures
+
+**** Processing Components
+
+**** Input/ Output Components
+
+**** Types of Computers
+
+**** Common Enterprise Back-end Devices
+
+
+**** Universal Serial Bus
+
+**** Memory Cards/ Flash Drives
+
+
+**** Radio Frequency Identification
+
+*** Hardware Maintenance Program
+
+*** Hardware Monitoring Procedures
+
+*** Capacity Management
+
+
+
+
+
+
+
+** I.S. Architecture and Software
+
+*** Operating Systems
+
+**** Software Control Features or Parameters
+
+**** Software Integrity Issues 
+
+**** Activity Logging and Reporting Options
+
+*** Access Control Software 
+
+*** Data Communications Software
+
+*** Data Management
+
+**** File Organization 
+
+*** Database Management System 
+
+**** DBMS Architecture
+
+**** Detailed DBMS Metadata Architecture
+
+**** Data Dictionary/ Directory System
+
+**** Database Structure
+
+**** Database Controls
+
+*** Tape and Disk Management Systems
+
+
+*** Utility Programs
+
+
+*** Software Licensing Issues
+
+*** Digital Rights Management
+
+
+
+
+
+
+
+** I.S. Network Infrastructure
+
+*** Enterprise Network Architectures
+
+*** Types of Networks
+
+*** Network Services
+
+*** Network Standards and Protocols
+
+*** O.S.I. Architecture
+
+*** Application of the O.S.I. Model in Network Architectures
+
+**** Local Area Network
+
+
+**** Wide Area Network
+
+**** Wireless Networks
+
+
+**** _Ad Hoc_ Networks
+
+**** Public "Global" Internet Infrastructure
+
+**** Network Administration and Control
+
+
+**** Applications in a Networked Environment
+
+
+
+
+-- Disaster Recovery Planning 
+
+--- Recovery Point Objective and Recovery Time Objective
+
+--- Recovery Strategies
+
+--- Recovery Alternatives
+
+---- Contractual Provisions
+
+---- Procuring Alternative Hardware
+
+---- Application Disaster Recovery Methods
+
+---- Data Storage Disaster Recovery Methods
+
+---- Telecommunication Networks Disaster Recovery Methods
+
+
+--- Development of Disaster Recovery Plans
+
+---- I.T. D.R.P. Contents
+
+---- I.T. D.R.P. Scenarios
+
+---- Recovery Procedures
+
+
+--- Organization and Assignment of Responsibilities
+
+--- Backup and Restoration
+
+---- Offsite Library Controls
+
+---- Security and Control of Offsite Facilities
+
+---- Media and Documentation Backup
+
+---- Types of Backup Devices and Media
+
+---- Periodic Backup Procedures
+
+---- Frequency of Rotation
+
+---- Types of Media and Documentation Rotated
+
+---- Backup Schemes
+
+---- Method of Rotation
+
+---- Record Keeping for Offsite Storage
+@endmindmap
+--
+
+
+
+
+
+
+== Information Systems Operations 
+
+=== Management of I.S. Operations
+
+==== Control Functions
+
+
+=== I.T. Service Management
+
+==== Service Level
+
+=== Infrastructure Operations 
+
+==== Scheduling
+
+
+=== Monitoring Use of Resources
+
+
+==== Process of Incident Handling
+
+==== Problem Management
+
+
+==== Detection, Documentation, Control, Resolution, and Reporting of Abnormal Conditions
+
+=== Support/ Help Desk
+
+=== Change Management Process
+
+=== Release Management 
+
+
+=== Quality Assurance
+
+=== Information Security Management
+
+=== Media Sanitation
+
+
+
+
+
+
+
+
+== Information Systems Hardware
+
+=== Computer Hardware Components and Architectures
+
+==== Processing Components
+
+==== Input/ Output Components
+
+==== Types of Computers
+
+==== Common Enterprise Back-end Devices
+
+
+==== Universal Serial Bus
+
+==== Memory Cards/ Flash Drives
+
+===== Risks 
+
+===== Security Control 
+
+==== Radio Frequency Identification
+
+===== RFID Applications 
+
+===== RFID Risks
+
+===== RFID Security Control
+
+=== Hardware Maintenance Program
+
+=== Hardware Monitoring Procedures
+
+=== Capacity Management
+
+
+
+
+
+
+== I.S. Architecture and Software
+
+=== Operating Systems
+
+==== Software Control Features or Parameters
+
+==== Software Integrity Issues 
+
+==== Activity Logging and Reporting Options
+
+=== Access Control Software 
+
+=== Data Communications Software
+
+=== Data Management
+
+==== File Organization 
+
+=== Database Management System 
+
+==== DBMS Architecture
+
+==== Detailed DBMS Metadata Architecture
+
+==== Data Dictionary/ Directory System
+
+==== Database Structure
+
+==== Database Controls
+
+=== Tape and Disk Management Systems
+
+
+=== Utility Programs
+
+
+=== Software Licensing Issues
+
+=== Digital Rights Management
+
+
+
+
+
+
+
+
+
+
+== I.S. Network Infrastructure
+
+=== Enterprise Network Architectures
+
+=== Types of Networks
+
+=== Network Services
+
+=== Network Standards and Protocols
+
+=== O.S.I. Architecture
+
+=== Application of the O.S.I. Model in Network Architectures
+
+==== Local Area Network
+
+===== L.A.N. Design Fundamentals and Specifications
+
+===== Network Physical Media Specifications
+
+===== Implementation of W.A.N.s
+
+===== L.A.N. Topologies and Protocols
+
+===== L.A.N. Media Access Technologies
+
+===== L.A.N. Components
+
+===== L.A.N. Technology Selection Criteria
+
+==== Wide Area Network
+
+===== W.A.N. Message Transmission Techniques
+
+===== W.A.N. Devices
+
+===== W.A.N. Technologies
+
+==== Wireless Networks
+
+===== Wireless Wide Area Networks
+
+===== Wireless Local Area Networks
+
+===== Wired Equivalent Privacy adn Wi-Fi Protected Access (WPA/ WPA 2)
+
+===== Wireless Personal Area Networks
+
+==== _Ad Hoc_ Networks
+
+===== Wireless Apllication Protocol
+
+==== Public "Global" Internet Infrastructure
+
+===== TCP/IP and its Relation to the OSI Reference Model
+
+===== TCP/IP Internet World Wide Web Services
+
+===== General Internet Terminology
+
+===== Transborder Data Flow
+
+==== Network Administration and Control
+
+===== Network Performance Metrics
+
+===== Network Management Issues
+
+===== Network Management Tools
+
+==== Applications in a Networked Environment
+
+===== Client-Serve Technology
+
+===== Middleware
+
+
+
+
+
+== Disaster Recovery Planning 
+
+=== Recovery Point Objective and Recovery Time Objective
+
+=== Recovery Strategies
+
+=== Recovery Alternatives
+
+==== Contractual Provisions
+
+==== Procuring Alternative Hardware
+
+==== Application Disaster Recovery Methods
+
+==== Data Storage Disaster Recovery Methods
+
+==== Telecommunication Networks Disaster Recovery Methods
+
+
+=== Development of Disaster Recovery Plans
+
+==== I.T. D.R.P. Contents
+
+==== I.T. D.R.P. Scenarios
+
+==== Recovery Procedures
+
+
+=== Organization and Assignment of Responsibilities
+
+=== Backup and Restoration
+
+==== Offsite Library Controls
+
+==== Security and Control of Offsite Facilities
+
+==== Media and Documentation Backup
+
+==== Types of Backup Devices and Media
+
+==== Periodic Backup Procedures
+
+==== Frequency of Rotation
+
+==== Types of Media and Documentation Rotated
+
+==== Backup Schemes
+
+===== Full Backup
+
+===== Incremental Backup
+
+===== Differential Backup
+
+==== Method of Rotation
+
+==== Record Keeping for Offsite Storage

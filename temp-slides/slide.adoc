@@ -1,0 +1,66 @@
+include::_settings_reveal.adoc[]
+
+// include::_settings_deck.adoc[]
+
+= Slide Title 1
+
+== Slide 1
+image::bg.jpg[10x40]
+
+This is it. 
+
+* first item
+* second item
+
+. first ordered
+. second ordered
+
+
+== Slide 2
+
+Slide 2 Content 1
+
+.Menu Interaction
+[uml, file="menu2.png"]
+--
+@startsalt
+{+
+{* File | Edit | Source | Refactor
+ Refactor | New | Open File | - | Close | Close All }
+{/ General | Fullscreen | Behavior | Saving }
+{
+{ Open image in: | ^Smart Mode^ }
+[X] Smooth images when zoomed
+[X] Confirm image deletion
+[ ] Show hidden images
+}
+[Close]
+}
+@endsalt
+--
+
+## Title
+
+.A mountain sunset
+image::https://live.staticflickr.com/5293/5448336655_36681dd703_n.jpg[Sunset,300,200]
+
+
+## Second slide
+
+> Best quote ever.
+
+
+== Slide 1
+This is it. 
+
+* first item
+* second item
+
+
+image::bg.jpg[10]
+
+
+. first ordered
+. second ordered
+
+

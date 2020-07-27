@@ -1,0 +1,172 @@
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 3
+
+
+
+== I.S. Network Infrastructure
+
+[uml,file="images/mindmap-04.png"]
+--
+@startmindmap
+* M.I.S
+
+** I.S. Network
+
+*** Enterprise Network Architectures
+
+*** Types of Networks
+
+*** Network Services
+
+*** Network Standards and Protocols
+
+*** O.S.I. Architecture
+
+*** Application of the O.S.I. Model in Network Architectures
+
+**** Local Area Network
+
+
+**** Wide Area Network
+
+**** Wireless Networks
+
+
+**** _Ad Hoc_ Networks
+
+**** Public "Global" Internet Infrastructure
+
+**** Network Administration and Control
+
+
+**** Applications in a Networked Environment
+
+
+
+@endmindmap
+--
+
+
+
+
+
+
+=== Enterprise Network Architectures
+
+=== Types of Networks
+
+=== Network Services
+
+=== Network Standards and Protocols
+
+=== O.S.I. Architecture
+
+=== Application of the O.S.I. Model in Network Architectures
+
+==== Local Area Network
+
+===== L.A.N. Design Fundamentals and Specifications
+
+===== Network Physical Media Specifications
+
+===== Implementation of W.A.N.s
+
+===== L.A.N. Topologies and Protocols
+
+===== L.A.N. Media Access Technologies
+
+===== L.A.N. Components
+
+===== L.A.N. Technology Selection Criteria
+
+==== Wide Area Network
+
+===== W.A.N. Message Transmission Techniques
+
+===== W.A.N. Devices
+
+===== W.A.N. Technologies
+
+==== Wireless Networks
+
+===== Wireless Wide Area Networks
+
+===== Wireless Local Area Networks
+
+===== Wired Equivalent Privacy adn Wi-Fi Protected Access (WPA/ WPA 2)
+
+===== Wireless Personal Area Networks
+
+==== _Ad Hoc_ Networks
+
+===== Wireless Apllication Protocol
+
+==== Public "Global" Internet Infrastructure
+
+===== TCP/IP and its Relation to the OSI Reference Model
+
+===== TCP/IP Internet World Wide Web Services
+
+===== General Internet Terminology
+
+===== Transborder Data Flow
+
+==== Network Administration and Control
+
+
+
+The tools consist of reports, monitors and analyzers.
+
+Response time reports::  identify the time necessary for a command entered by a user at a terminal to
+be answered by the host system. Response time is important because end users experiencing slow
+response time will be reluctant to utilize IS resources to their fullest extent. These reports typically
+identify average, worst and best response times over a given time interval for individual
+telecommunication lines or systems. These reports should be reviewed by IS management and system
+support personnel to track potential problems. If response time is slow, all possible causes, such as
+I/O channel bottlenecks, bandwidth utilization and CPU capacity, should be investigated; various
+solutions should be analyzed; and an appropriate and cost-justified corrective action should be taken.
+
+Downtime reports:: track the availability of telecommunication lines and circuits. Interruptions due to
+power/line failure, traffic overload, operator error or other anomalous conditions are identified in a
+downtime report. 
+
+If downtime is excessive, IS management should consider the following remedies:
+
+• Add or replace telecommunications lines.
+• Switch to a more dependable transmission link (such as dedicated lines
+versus shared lines).
+• Install backup power supplies.• Improve access controls.
+• Closely monitor line utilization to better forecast user needs, both in the near and long term.
+
+Help desk reports:: are prepared by the help desk, which is staffed or supported by IT technicians
+who are trained to handle problems occurring during normal IS usage. If an end user encounters any
+problem, he/she can contact the help desk for assistance. Help desk facilities are critical to the
+telecommunication environment since they provide end users with an easy means of identifying and
+resolving problems quickly, before they have a major impact on IS performance and end-user
+resource utilization. Reports prepared by the help desk provide a history of the problems and their
+resolution.
+
+Online monitors:: check data transmission accuracy and errors. Monitoring can be performed by echo
+checking (received data are bounced back to sender for verification) and status checking all
+transmissions, ensuring that messages are not lost or transmitted more than once.
+Network monitors provide a real time display of network nodes and status.
+
+Network (protocol) analyzers:: are diagnostic tools attached to a network link that use network
+protocols’ intelligence for monitoring the packets flowing along the link and produce network usage
+reports. Network analyzers are typically hardware-based and operate at the data link and/or network
+level.
+
+Output includes the following information:
+
+• Protocol(s) in use
+• Type of packets flowing along the monitored link
+• Traffic volume analysis
+• Hardware errors, noise and software problems
+• Other performance statistics (e.g., percentage of used bandwidth)
+• Problems and possible solutions
+
+
+
+

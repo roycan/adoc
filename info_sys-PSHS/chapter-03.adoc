@@ -1,0 +1,230 @@
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 3
+
+
+
+== I.S. Architecture and Software
+
+
+[uml,file="images/mindmap-03.png"]
+--
+@startmindmap
+* M.I.S
+
+** I.S. Software
+
+*** Operating Systems
+
+
+*** Database Management System 
+
+**** Relational Database Structure
+**** Database Controls
+
+
+*** Software Licensing
+
+
+
+@endmindmap
+--
+
+== Information System Architecture and Software
+
+Organizations may use
+multiple service delivery channels, such as mobile apps, the Internet, service outlets, third-party
+service providers and automated kiosks. These channels use different technologies that may be serviced
+by the same backend database.
+
+
+=== Operating Systems
+
+It is common for OSs to run on virtual servers. In a virtual environment, software is used to partition
+one physical server into multiple independent virtual servers. Each of these environments can then run
+its own (and if required different) OS. To the operator, the OS behaves as if it were running on a
+physical server.
+
+
+
+
+=== Database Management System 
+
+DBMS system software aids in organizing, controlling and using the data needed by application programs. A DBMS provides the facility to create and maintain a well-organized database.
+
+The primary functions include the following. 
+
+* Reduced data redunduncy
+* Decreased access time 
+* Basic security over sensitive data
+
+The DBMS can include a *data dictionary* that identifies the fields, their characteristics and their use.
+Active data dictionaries require entries for all data elements and assist application processing of data
+elements, such as providing validation characteristics or print formats. Passive dictionaries are only
+a repository of information that can be viewed or printed.
+
+
+
+==== Relational Database Structure
+
+The relational model is based on the set theory and relational calculations. 
+A relational database allows the definition of data structures, storage/ retrieval operations and integrity constraints.
+
+Data and relationships among data are organized in tables.
+A table is a collection of rows. 
+A row is also known as a tuple.
+Each row in a table contains the same columns. 
+Columns are also called Domains or Attributes. 
+Columns correspond to fields.
+Tuples are equal to records in a conventional file structure.
+
+Relational tables have the following properties:
+
+* Values are atomic
+* Each row is unique
+* Column values are of the same kind
+* The sequence of columns is significant 
+* The sequence of rows is insignificant
+* Each column has a unique name
+
+A key feature of relational databases is the use of *normalization* rules to minimize the amount of information needed in tables to satisfy the users' queries to the database. 
+
+Normalizations rules generally include the following.
+
+1. A given instance of a data object has one and only one value for each attribute
+2. Attributes represent elementary data items; they should have no internal structure
+3. Each tuple has a primary key that identifies some entity. The rest of the attributes should be mutually independent of each other; thus making the tuple fully dependent on the primary key
+4. Any foreign key should either be null or have a value linking to other tables; this is known as referential integrity.
+
+
+
+.Example Relational Database Organization
+[uml,file="images/RDMS.png"]
+--
+skinparam linetype ortho
+
+entity Department {
+  Department ID
+  --
+  Department Name
+  Department Type
+}
+
+entity Manager{
+  Manager ID 
+  --
+  Manager Name
+  Department ID
+}xx
+
+entity Staff{
+  Staff ID
+  -- 
+  Manager ID
+  Surname
+  Forename
+  Initial
+  Date of Birth
+  Job Title
+}
+
+entity Computer{
+  Staff ID
+  Manager ID 
+  --
+  Storage Size
+  RAM
+  CPU 
+  Applications
+}
+
+Department ||-{ Manager 
+Manager ||-{ Staff
+Staff ||--{ Computer
+Manager ||--{ Computer
+--
+
+
+
+• The sequence of columns is insignificant.
+• The sequence of rows is insignificant.
+• Each column has a unique name.
+
+
+Certain fields may be designated as keys, so searches for specific values of that field will be quicker
+because of the use of indexing. If fields in two different tables take their values from the same set, a
+join operation can be performed to select related records in the two tables by matching values in
+those fields. This can be extended to joining multiple tables on multiple fields. These relationships
+are only specified at retrieval time, so relational databases are dynamic.
+
+
+A key feature of relational databases is the use of normalization rules to minimize the amount of
+information needed in tables to satisfy the users’
+structured and unstructured queries to the database. Generally 
+followed, normalization rules include:
+
+• A given instance of a data object has only one value for each attribute.
+• Attributes represent elementary data items; they should contain no internal structure.
+• Each tuple (record) consists of a primary key that identifies some entity, together with a set of zero
+or more mutually independent attribute values that describes the entity in some way (fully dependent
+on primary key).
+• Any foreign key should have a null value or should have an existing value linking to other tables;
+this is known as referential integrity.
+
+
+==== Database Controls
+
+It is critical that database integrity and availability are maintained. This is ensured through the
+following controls:
+
+• Establish and enforce definition standards.
+• Establish and implement data backup and recovery procedures to ensure database availability.
+• Establish the necessary levels of access controls, including privileged access, for data items, tables
+and files to prevent inadvertent or unauthorized access.
+• Establish controls to ensure that only authorized personnel can update the database.
+• Follow database restructuring procedures when making logical, physical and procedural changes.
+• Use database performance reporting tools to monitor and maintain database efficiency (e.g.,
+available storage space, buffer size, CPU usage, disk storage configuration and deadlock conditions).
+• Minimize the ability to use nonsystem tools or other utilities (i.e., those outside security control, to
+access the database).
+
+
+
+
+=== Software Licensing
+
+There are two different software licensing types: free and paid.
+
+==== Free 
+Open source:: 
+The software may be used, copied, studied, modified and
+redistributed as required. Open source is usually accompanied by the program source and a copy of
+the software license (for example, the GNU General Public License). A well-known example is
+Linux.
+Freeware:: 
+The software is free, but the source code cannot be redistributed. A well-known example is Adobe
+Acrobat Reader®.
+Shareware:: 
+The software may be free initially; however, this may only be on a trial basis or have limited
+functionality compared to the full,
+commercial version (may also be known as trial version, demo ware or an evaluation copy).
+
+
+==== Paid
+
+Per central processing unit::
+Depends on the power of the server, specifically the number of the (CPU)
+CPUs; could include the number of CPU cores
+Per seat:: 
+Depends on the number of unique users of the system
+Concurrent users::
+Depends on the total number of users using the software within a predefined period of time
+Utilization:: Depends on how busy the CPU is or the number of users that are
+active at any one time
+Per workstation::
+Depends on the number of individual workstations (NOT users) that connect to the software
+Enterprise::
+Everyone from the company may use.
+
+

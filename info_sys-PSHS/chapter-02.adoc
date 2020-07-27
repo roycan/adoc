@@ -1,0 +1,230 @@
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 3
+
+== Information Systems Hardware
+
+[uml,file="images/mindmap-02.png"]
+--
+@startmindmap
+* M.I.S
+
+** I.S. Hardware
+
+*** Computer Hardware Components and Architectures
+
+
+**** Common Enterprise Back-end Devices
+
+
+**** Memory Cards/ Flash Drives
+
+*** Hardware Maintenance Program
+
+*** Hardware Monitoring Procedures
+
+*** Capacity Management
+
+@endmindmap
+--
+
+
+
+
+
+=== Computer Hardware Components and Architectures
+
+
+==== Common Enterprise Back-end Devices
+
+Following are some of the most common devices encountered:
+
+Print servers:: Businesses of all sizes require that printing capability be made available to users
+across multiple sites and domains. Generally, a network printer is configured based on where the
+printer is physically located and who within the organization needs to use it. Print servers allow
+businesses to consolidate printing resources for cost savings.
+
+File servers:: File servers provide for organizationwide access to files and programs. Document
+repositories can be centralized to a few locations within the organization and controlled with an
+access-control matrix.
+Group collaboration and document management are easier when adocument repository is used, rather than dispersed storage across multiple workstations.
+
+Application (program) servers:: Application servers typically host the software programs that
+provide application access to client computers, including processing the application business logic
+and communication with the application’s database. Consolidation of applications and licenses in
+servers enables centralized management and a more secure environment.
+
+Web servers:: Web servers provide information and services to external customers and internal
+employees through web pages. They are normally
+accessed by their uniform resource locators (URLs).
+
+Proxy servers:: Proxy servers provide an intermediate link between users and resources. As
+opposed to direct access, proxy servers will access services on a user’s behalf. Depending on the
+services being proxied, a proxy server may render more secure and faster response than direct
+access.
+
+Database servers:: Database servers store data and act as a repository. The servers concentrate on
+storing information rather than presenting it to be usable. Application servers and web servers use thedata stored in database servers and process the data into usable information.
+
+Appliances (specialized devices):: Appliances provide a specific service and normally are not
+capable of running other services. As a result, the devices are significantly smaller and faster, and
+very efficient. Capacity and performance demands require certain services to be run on appliances
+instead of generic servers.
+
+Examples of appliances are:
+
+*  Firewalls
+*  Intrusion detection systems (IDSs)
+* Intrusion prevention systems (IPSs)
+* Switches
+* Routers
+* Virtual private networks (VPNs)
+* Load balancers
+
+
+
+==== Memory Cards/ Flash Drives
+
+===== Risks 
+
+Risk related to the use of USBs includes the following:
+
+Viruses and other malicious software:: USB drives present a vector for computer viruses that is
+very difficult to defend against. Whenever files are transferred between two machines, there is a risk
+that malware (e.g.,
+viruses, spyware and keyloggers) will be transmitted, and USB drives are no exception. Some USB
+drives include a physical switch that can put the drive in read-only mode. When transferring files to
+an untrusted machine, a USB drive that is in read-only mode will prevent any data (including viruses)
+to be written to the device.
+
+Data theft:: Hackers, corporate spies and disgruntled employees steal data, and in many cases,
+these are crimes of opportunity. With a USB drive, any unattended and unlocked PC with a USB port
+provides an opportunity for criminal activity. Social engineering can give a hacker physical access to
+a corporate PC to steal data or plant spyware.
+
+Data and media loss:: The portability of USB drives presents an increased risk for lost data and
+media. If an unencrypted USB device is lost, any individual who finds the device will be able to
+access the data on the drive.
+
+Corruption of data:: If the drive is improperly unplugged, then data loss can occur due to
+corruption. USB drives differ from other types of removable media, such as CD-ROM and DVD-
+ROM devices, because the computer is not automatically alerted when USB drives are removed.
+Users of USB drives must alert the computer when they intend to remove the device; otherwise, the
+computer will be unable to perform the necessary clean-up functions required to disconnect the
+device, especially if files from the device are currently open.
+
+Loss of confidentiality:: Because of its convenient small physical size and large logical size, a
+significant amount of data can be stored on a USB
+drive. Some stored information is confidential, and loss of data becomes a risk when the drive is lost,
+increasing the risk of the data falling into the hands of a competitor. Legal issues can also be
+associated with loss of confidentiality. For example, in the United States, lost or compromised patient
+data can indicate a breach of patient privacy, thus violating the Health Insurance Portability and
+Accountability Act (HIPAA).
+
+
+
+===== Security Control 
+
+The following controls can be used to help reduce risk associated with the use of USB devices:
+
+Encryption:: An ideal encryption strategy allows data to be stored on the USB drive but renders the
+data useless without the required encryption key, such as a strong password or biometric data.
+Products are available to
+implement strong encryption and comply with the latest Federal Information Processing Standards
+(FIPS). Encryption is a good method to protect information written to the device from loss or theft of
+the device.
+But unless the information is also encrypted on the network or local workstation hard drive, sensitive
+data still are exposed to theft.
+
+The lock desktop policy enforcement:: In higher-risk environments, desktop computers should be
+configured to automatically lock after short intervals.
+
+Antivirus policy:: Antivirus software should be configured to scan all attached drives and
+removable media. Users should be trained to scan files before opening them.
+
+Inclusion of return information:: If a USB drive is lost or misplaced, including a small, readable
+text file containing return information may help with device retrieval. It would be prudent to NOT
+include company details, but rather a phone number or post office box. It also would be prudent to
+include a legal disclaimer that clearly identifies the information on the drive as confidential and
+protected by law.
+
+
+
+
+=== Hardware Maintenance Program
+
+To ensure proper operation, hardware must be routinely cleaned and serviced.
+
+Maintenance should be scheduled
+to closely coincide with vendor-provided specifications. Maintenance is also important for
+environmental hardware that controls temperature and humidity, fire protection and electrical power.
+
+• Reputable service company information for each hardware resource requiring routine maintenance
+• Maintenance schedule information
+• Maintenance cost information
+• Maintenance performance history information, such as planned versus unplanned, executed and
+exceptional
+
+The IS Unit should monitor, identify and document any deviations from vendor maintenance
+specifications and provide supporting arguments for this deviation
+
+
+=== Hardware Monitoring Procedures
+
+The following are typical procedures and reports for monitoring the effective and efficient use of
+hardware:
+
+Availability reports:: These reports indicate the time periods during which the computer is in
+operation and available for use by users or other processes. A key concern addressed by this report is
+excessive IS
+unavailability, referred to as downtime. This unavailability may indicate inadequate hardware
+facilities, excessive OS maintenance, the need for preventive maintenance, inadequate environmental
+facilities (e.g., power supply or air conditioning) or inadequate training for operators.
+
+Hardware error reports:: These reports identify CPU, I/O, power and storage failures. These
+reports should be reviewed by IS operations management to ensure that equipment is functioning
+properly, to detect failures and to initiate corrective action. The MIS team should be aware that attribution of an error in hardware or software is not necessarily easy and immediate. Reports should
+be checked for intermittent or recurring problems, which might indicate difficulties in properly
+diagnosing the errors.
+
+Asset management reports:: These reports provide an inventory of network-connected equipment,
+such as PCs, servers, routers and other devices.
+
+Utilization reports:: These automated reports document the use of the machine and peripherals.
+Software monitors are used to capture utilization measurements for processors, channels and
+secondary storage media, such as disk and tape drives. Depending on the OS, resource utilization for
+multiuser computing environments found in mainframe/large-scale
+computers should average in the 85- to 95-percent range, with allowances for utilization occasionally
+reaching 100 percent and falling below 70
+percent. Trends from utilization reports can be used by IS management to predict whether more or
+fewer processing resources are required.
+
+
+=== Capacity Management
+
+The following information is key to managing capacity.
+
+• CPU utilization
+• Computer storage utilization
+• Internet Speed
+• LAN and WAN bandwidth utilization
+• I/O channel utilization
+• Number of users
+• New technologies
+• New applications
+• Service level agreements (SLAs)
+
+
+An element in capacity management is deciding whether to host the organization’s applications
+distributed across several small servers, consolidated onto a few large servers, in the cloud or
+combinations of the three hosts. Consolidating applications on a few large servers (also known as
+application stacking) often allows the organization to make better overall use of the resources, but it
+increases the impact of a server outage, and it affects more applications when the server has to be
+shut down for maintenance.
+
+Using the cloud allows extra capacity to be purchased on demand, but also brings the risk of relying
+on the supplier.
+
+Capacity management must also include network devices, such as switches and routers, that comprise
+physically and logically separated networks (virtual local area networks [VLANs]).
