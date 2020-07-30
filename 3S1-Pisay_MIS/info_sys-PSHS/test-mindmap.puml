@@ -1,0 +1,26 @@
+@startmindmap
+* Debian
+** Ubuntu
+*** Linux Mint
+*** Kubuntu
+*** Lubuntu
+*** KDE Neon
+** LMDE
+** SolydXK
+** SteamOS
+** Raspbian with a very long name
+*** <s>Raspmbc</s> => OSMC
+*** <s>Raspyfi</s> => Volumio
+@endmindmap
+
+
+@startmindmap
+* M.I.S.
+-- Executive Summary
+-- I.S. Operations
+
+** I.S. Hardware
+** I.S. Architecture and Software
+** I.S. Network Infrastructure
+-- Disaster Recovery Planning
+@endmindmap

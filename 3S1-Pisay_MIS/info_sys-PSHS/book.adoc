@@ -1,4 +1,4 @@
-= PSHS-MC: Information Systems Operations, Maintainance and Support
+= PSHS-MC: Information Systems Operations, Maintenance and Support
 Roy Vincent L. Canseco (C) 2020 Manila                         
 Version 0.1, 07.2020                                       
 :doctype: book

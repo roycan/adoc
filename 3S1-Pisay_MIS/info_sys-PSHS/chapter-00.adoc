@@ -4,7 +4,7 @@
 :toclevels: 3
 
 
-    This is a draft verion. 
+    This is a draft verion.
 
 == Executive Summary
 
@@ -18,11 +18,29 @@
 ** I.S. Hardware
 ** I.S. Architecture and Software
 ** I.S. Network Infrastructure
--- Disaster Recovery Planning 
-
-
+-- Disaster Recovery Planning
 @endmindmap
 --
+
+
+image::images/CH00-mm.png[]
+
+.ljn
+|===
+|Header 1 |Header 2 |Header 3
+
+|Column 1, row 1
+|Column 2, row 1
+|Column 3, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+|Column 3, row 2
+
+|Column 1, row 3
+|Column 2, row 3
+|Column 3, row 3
+|===
 
 
 IT service management (ITSM) practices are important to provide assurance to users and to management that
